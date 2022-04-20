@@ -6,9 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 class Searchbar extends React.Component {
   state = {
     imageName: '',
-    id: '',
-    webformatURL: '',
-    largeImageURL: '',
+    
   };
   handlImageName = event => {
     this.setState({ imageName: event.currentTarget.value.toLowerCase() });
