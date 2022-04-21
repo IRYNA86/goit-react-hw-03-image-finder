@@ -1,12 +1,17 @@
 import React from "react";
 import Searchbar from './components/Searchbar/Searchbar';
 import { ToastContainer } from 'react-toastify';
-import ImageGalleryItem from './components/ImageGalleryItem/ImageGalleryItem';
+import ImageGallery from './components/ImageGallery/ImageGallery';
+import apiGallery from 'services/api';
+import mapper from 'services/mapper'
 
 
 class App extends React.Component {
     state = {
         imageName: '',
+        id: '',
+        webformatURL: '',
+        largeImageURL: '' 
     }
     handleFormSubmit = imageName => {
         this.setState({imageName})
@@ -15,7 +20,7 @@ class App extends React.Component {
         return (
             <>
                 <Searchbar onSubmit={this.handleFormSubmit} />
-                <ImageGalleryItem imageName={this.state.imageName}/>
+                <ImageGallery imageName={this.state.imageName}/>
                 <ToastContainer autoClose={ 3000}/>
                 </>
     )
