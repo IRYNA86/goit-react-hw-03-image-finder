@@ -1,10 +1,10 @@
 import React from 'react';
 // import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { BallTriangle } from 'react-loader-spinner';
-import { toast } from 'react-toastify';
+
 import ImageGalleryItem from 'components/ImageGalleryItem/ImageGalleryItem';
 import apiGallery from 'services/api'
-import {ImageGalleryOne} from 'components/ImageGallery/ImageGalleryOne'
+
 
 class ImageGallery extends React.Component {
   state = {
@@ -28,7 +28,7 @@ class ImageGallery extends React.Component {
   }
 
   render() {
-    const { imageView, error, status, gallery } = this.state;
+    const {  error, status} = this.state;
 
     if (status === 'idle') {
       <></>;

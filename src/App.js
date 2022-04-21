@@ -2,8 +2,8 @@ import React from "react";
 import Searchbar from './components/Searchbar/Searchbar';
 import { ToastContainer } from 'react-toastify';
 import ImageGallery from './components/ImageGallery/ImageGallery';
-import apiGallery from 'services/api';
-import mapper from 'services/mapper'
+// import apiGallery from 'services/api';
+// import mapper from 'services/mapper'
 
 
 class App extends React.Component {
