@@ -1,9 +1,9 @@
 import React from 'react';
 // import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { BallTriangle } from 'react-loader-spinner';
-
-import ImageGalleryItem from 'components/ImageGalleryItem/ImageGalleryItem';
-import apiGallery from 'services/api'
+import {ImageGalleryOne} from 'components/ImageGallery/ImageGalleryOne'
+// import ImageGalleryItem from 'components/ImageGalleryItem/ImageGalleryItem';
+import {apiGallery} from 'services/api'
 
 
 class ImageGallery extends React.Component {
@@ -27,6 +27,7 @@ class ImageGallery extends React.Component {
     }
   }
 
+  
   render() {
     const {  error, status} = this.state;
 
@@ -51,7 +52,7 @@ class ImageGallery extends React.Component {
       return (
         // Сюда нужно вставить одну карточку??
         
-          <ImageGalleryItem/>
+          <ImageGalleryOne/>
             
         // <li className="gallery-item">
         //   <img src={imageView.hits[0].webformatURL} alt="" />

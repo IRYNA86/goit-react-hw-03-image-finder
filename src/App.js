@@ -10,7 +10,7 @@ class App extends React.Component {
     state = {
         imageName: '',
         id: '',
-        webformatURL: '',
+        images: [],
         largeImageURL: '' 
     }
     handleFormSubmit = imageName => {
@@ -20,7 +20,8 @@ class App extends React.Component {
         return (
             <>
                 <Searchbar onSubmit={this.handleFormSubmit} />
-                <ImageGallery imageName={this.state.imageName}/>
+                <ImageGallery imageName={this.state.imageName}
+                    images={ this.state.images}/>
                 <ToastContainer autoClose={ 3000}/>
                 </>
     )

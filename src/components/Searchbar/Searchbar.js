@@ -12,7 +12,7 @@ class Searchbar extends React.Component {
   handlImageName = event => {
     this.setState({ imageName: event.currentTarget.value.toLowerCase() });
   };
-  hanleSubmite = event => {
+  handleSubmite = event => {
       event.preventDefault();
       if (this.state.imageName.trim() === '') {
           toast.warn('Введите название');
@@ -25,7 +25,7 @@ class Searchbar extends React.Component {
   render() {
     return (
       <header className="searchbar">
-        <form className="form" onSubmit={this.hanleSubmite}>
+        <form className="form" onSubmit={this.handleSubmite}>
           <button type="submit" className="button">
             <span className="button-label">Search</span>
           </button>

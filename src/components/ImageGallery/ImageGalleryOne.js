@@ -4,15 +4,33 @@ import ImageGalleryItem from 'components/ImageGalleryItem/ImageGalleryItem';
 export const ImageGalleryOne = ({ images }) => {
   return (
     <>
-      {images.map(({ id, webformatURL, largeImageURL, description }) => (
-        <ImageGalleryItem
+      {images.map(({ id, webformatURL }) => {
+        return (<ImageGalleryItem
           key={id}
-          smallImage={webformatURL}
-          largeImage={largeImageURL}
+          imageView={webformatURL}
           
-          description={description}
-        />
-      ))}
+          
+          
+        />);
+      })}
     </>
   );
 };
+// export const ImageGallery = ({ gallery, openLargeImage }) => {
+//   return (
+//     <Gallery>
+//       {gallery.map(({ id, webformatURL, largeImageURL, tags }) => {
+//         return (
+//           <ImageGalleryItem
+//             key={id}
+//             id={id}
+//             smallImg={webformatURL}
+//             largeImg={largeImageURL}
+//             tags={tags}
+//             openLargeImage={openLargeImage}
+//           />
+//         );
+//       })}
+//     </Gallery>
+//   );
+// };
