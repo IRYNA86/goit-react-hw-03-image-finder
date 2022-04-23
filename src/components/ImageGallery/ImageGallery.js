@@ -1,10 +1,9 @@
 import React from 'react';
 // import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { BallTriangle } from 'react-loader-spinner';
-import {ImageGalleryOne} from 'components/ImageGallery/ImageGalleryOne'
+import { ImageGalleryOne } from 'components/ImageGallery/ImageGalleryOne';
 // import ImageGalleryItem from 'components/ImageGalleryItem/ImageGalleryItem';
-import {apiGallery} from 'services/api'
-
+import { apiGallery } from 'services/api';
 
 class ImageGallery extends React.Component {
   state = {
@@ -17,7 +16,6 @@ class ImageGallery extends React.Component {
   componentDidUpdate(prevProps, prevState) {
     const prevName = prevProps.imageName;
     const nextName = this.props.imageName;
-    
 
     if (prevName !== nextName) {
       this.setState({ status: 'pending' });
@@ -27,9 +25,8 @@ class ImageGallery extends React.Component {
     }
   }
 
-  
   render() {
-    const {  error, status} = this.state;
+    const { error, status } = this.state;
 
     if (status === 'idle') {
       <></>;
@@ -51,9 +48,9 @@ class ImageGallery extends React.Component {
     if (status === 'resolved') {
       return (
         // Сюда нужно вставить одну карточку??
-        
-          <ImageGalleryOne/>
-            
+
+        <ImageGalleryOne />
+
         // <li className="gallery-item">
         //   <img src={imageView.hits[0].webformatURL} alt="" />
         //   </li>

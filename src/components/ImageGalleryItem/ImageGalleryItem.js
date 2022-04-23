@@ -12,10 +12,3 @@ export default function ImageGalleryItem({
     )
 }
 
-// export const ImageGalleryItem = ({ smallImg, tags, openLargeImage, id }) => {
-//   return (
-//     <GalleryItem onClick={() => openLargeImage(id)}>
-//       <GalleryItemImage src={smallImg} alt={tags} />
-//     </GalleryItem>
-//   );
-// };
